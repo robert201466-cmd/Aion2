@@ -16,8 +16,7 @@
     sorcerer:     15210000,   // Flame Arrow
     elementalist: 16010000,   // Cold Shock
     cleric:       17010000,   // Earth's Retribution
-    chanter:      18010000,   // Onslaught
-    brawler:      19130000    // Rampage
+    chanter:      18010000    // Onslaught
   };
 
   var grid = document.getElementById("class-grid");

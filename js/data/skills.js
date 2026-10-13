@@ -1,5 +1,5 @@
-﻿/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-   AION 2 â€” skill rows for every playable class.
+/* -----------------------------------------------------------------------------
+   AION 2 - skill rows for every playable class.
 
    Source: AION 2 client data, build 0.0.4387.0 (English), extracted 2026-10-12.
    Evidence tag: data.  IDs and values change with game patches.
@@ -23,15 +23,18 @@
    That excludes passives, and excludes the sub-skill effect rows and the
    role-"other" variants.
 
-   Every class's Dodge uses the same shared icon, ICON_CO_SKILL_001 â€” the "CO"
+   Every class's Dodge uses the same shared icon, ICON_CO_SKILL_001 - the "CO"
    prefix marks skills common to all classes, like Defiance (ICON_CO_SKILL_002)
    and the Assault row (ICON_CO_SKILL_003).
 
    Brawler ("fighter") is not included. This client build has no names for that
-   class at all — name is null and the description reads "???" — so a page for
+   class at all - name is null and the description reads "???" - so a page for
    it would be mostly IDs and placeholder badges. The rows can be re-added from
    the client data if a future build localises them.
-   â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+
+   This header is deliberately ASCII-only: PowerShell 5.1 reads UTF-8 files as
+   ANSI, so a round-trip through it corrupts box-drawing and dash characters.
+----------------------------------------------------------------------------- */
 
 window.A2 = window.A2 || {};
 
@@ -194,9 +197,9 @@ window.A2.SKILLS_BY_CLASS = {
     [14140000,"Shackling Arrow",0,800,20,0,150,"Hold","Root",0,0],
     [14200000,"Guerilla Strike",0,1000,20,0,0,"","",0,0],
     [14210000,"Eye of Rapid Burst",3000,0,0,0,0,"","",0,0],
-    [14230000,"Explosive Arrow",0,800,20,0,0,"","",0,0],
+    [14230000,"Explosive Arrow (alt row)",0,800,20,0,0,"","",0,0],
     [14240000,"Afterimage",20000,700,0,0,0,"","Vaizel's Authority",0,0],
-    [14250000,"Hunters Resolve_active",60000,700,0,0,0,"","Vaizel's Authority",0,0],
+    [14250000,"Hunter's Resolve (active)",60000,700,0,0,0,"","Vaizel's Authority",0,0],
     [14290000,"Arrow of Space-time",60000,2900,20,0,0,"","",0,0],
     [14300000,"Dust Arrow",20000,1266,20,0,100,"Blind","Blind",0,0],
     [14320000,"Impact Kick",120000,1555,4,0,0,"","",0,0],

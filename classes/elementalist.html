@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Combo Builder â€” AION 2</title>
+<title>Combo Builder — AION 2</title>
 <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
@@ -25,15 +25,15 @@
 
 <main class="layout">
 
-  <!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ LEFT: skill library â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+  <!-- ───────────────────────── LEFT: skill library ───────────────────────── -->
   <section class="panel library" aria-label="Skill library">
     <div class="panel-head">
       <h2>Skill library</h2>
-      <span id="lib-count" class="muted">â€”</span>
+      <span id="lib-count" class="muted">—</span>
     </div>
 
     <div class="lib-controls">
-      <input id="search" type="search" placeholder="Search name, ID or statusâ€¦" autocomplete="off" spellcheck="false">
+      <input id="search" type="search" placeholder="Search name, ID or status…" autocomplete="off" spellcheck="false">
       <div class="chips" id="chips">
         <button class="chip is-active" data-filter="all" type="button">All</button>
         <button class="chip" data-filter="damage" type="button">Damage</button>
@@ -47,7 +47,7 @@
     <ul id="skill-list" class="skill-list" aria-label="Skills"></ul>
   </section>
 
-  <!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ RIGHT: combo + output â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+  <!-- ───────────────────────── RIGHT: combo + output ─────────────────────── -->
   <div class="right-col">
 
     <section class="panel combo" aria-label="Combo">
@@ -93,19 +93,19 @@
         <label class="opt">
           <span>Default target</span>
           <select id="opt-target">
-            <option value="0">0 Â· current / closest mob</option>
-            <option value="1">1 Â· self</option>
-            <option value="2">2 Â· current only</option>
-            <option value="3">3 Â· closest enemy player</option>
+            <option value="0">0 · current / closest mob</option>
+            <option value="1">1 · self</option>
+            <option value="2">2 · current only</option>
+            <option value="3">3 · closest enemy player</option>
           </select>
         </label>
 
         <label class="opt">
           <span>Repeat</span>
           <select id="opt-repeat">
-            <option value="0">0 Â· run once</option>
-            <option value="1">1 Â· while key held</option>
-            <option value="2">2 Â· toggle on/off</option>
+            <option value="0">0 · run once</option>
+            <option value="1">1 · while key held</option>
+            <option value="2">2 · toggle on/off</option>
           </select>
         </label>
       </div>
@@ -128,8 +128,8 @@
 
       <p class="hint">
         Paste this section into a macro file (for example <code>macros.ini</code>) listed on config line&nbsp;5.
-        Lines <code>keys</code>, <code>keys2</code>, <code>keys3</code> â€¦ run in number order.
-        Nothing here has been run in game â€” check it with Speeder's own verifier before relying on it.
+        Lines <code>keys</code>, <code>keys2</code>, <code>keys3</code> … run in number order.
+        Nothing here has been run in game — check it with Speeder's own verifier before relying on it.
       </p>
     </section>
 
@@ -137,7 +137,7 @@
 </main>
 
 <footer class="footer">
-  <span>Skills, cooldowns and attack timers from AION 2 client data (build 0.0.4387.0) â€” IDs change with patches.</span>
+  <span>Skills, cooldowns and attack timers from AION 2 client data (build 0.0.4387.0) — IDs change with patches.</span>
 </footer>
 
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
@@ -149,11 +149,12 @@
       <button id="help-close" class="btn tiny ghost" type="button">Close</button>
     </div>
     <ol class="help-list">
-      <li><b>Add skills</b> â€” click any card in the library, or load a starter combo.</li>
-      <li><b>Order them</b> â€” drag a row by its handle, or use the â†‘ / â†“ buttons.</li>
-      <li><b>Tune each step</b> â€” <code>slot</code> (hotbar number), <code>wait</code> (ms cap for the ability to fire) and <code>target</code>. Leave a field empty to use the defaults above.</li>
-      <li><b>Exact IDs</b> â€” the ID on a card is the base skill. A real character uses a <i>specialization</i> child ID, so either tick <b>Use hotbar slots</b> (recommended), or paste your exact ID from <code>-hotbar</code> into the step's <code>id</code> box.</li>
-      <li><b>Icons</b> â€” most skills ship with their game icon in <code>icons/</code>; the rest show a generated badge.</li>
+      <li><b>Add skills</b> — click any card in the library, or load a starter combo.</li>
+      <li><b>Order them</b> — drag a row by its handle, or use the ↑ / ↓ buttons.</li>
+      <li><b>Tune each step</b> — <code>slot</code> (hotbar number), <code>wait</code> (ms cap for the ability to fire) and <code>target</code>. Leave a field empty to use the defaults above.</li>
+      <li><b>Exact IDs</b> — the ID on a card is the base skill. A real character uses a <i>specialization</i> child ID, so either tick <b>Use hotbar slots</b> (recommended), or paste your exact ID from <code>-hotbar</code> into the step's <code>id</code> box.</li>
+      <li><b>Trigger key</b> — every key from Speeder's virtual key code table, grouped, including mouse buttons (left, right, middle, side buttons, scroll) and the left/right modifier variants. Use 160/161 for Shift, not 16. Letters, digits and symbols work, but the key is swallowed while the macro runs.</li>
+      <li><b>Icons</b> — most skills ship with their game icon in <code>icons/</code>; the rest show a generated badge.</li>
     </ol>
     <p class="hint">
       Timings are estimates taken from the client's attack timers; cooldown warnings assume every step finishes back to back.

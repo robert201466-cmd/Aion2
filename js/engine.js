@@ -526,8 +526,12 @@
   /* ── wiring ───────────────────────────────────────────────────────────── */
 
   function initTriggerKeys() {
-    $("#opt-key").innerHTML = A2.TRIGGER_KEYS.map(function (k) {
-      return '<option value="' + k.vk + '"' + (k.vk === state.opts.key ? " selected" : "") + ">" + esc(k.label) + " (VK " + k.vk + ")</option>";
+    $("#opt-key").innerHTML = A2.TRIGGER_KEYS.map(function (g) {
+      var opts = g.keys.map(function (k) {
+        return '<option value="' + k.vk + '"' + (k.vk === state.opts.key ? " selected" : "") + ">" +
+          esc(k.label) + " (VK " + k.vk + ")</option>";
+      }).join("");
+      return '<optgroup label="' + esc(g.group) + '">' + opts + "</optgroup>";
     }).join("");
   }
 
@@ -603,6 +607,8 @@
           li.querySelector(".step-name").innerHTML = esc(s ? s.name : "Unknown ID " + v) +
             ' <span class="skill-id">' + esc(s ? s.id : v) + "</span>";
           li.querySelector(".step-sub").innerHTML = s ? skillMeta(s) : '<span class="tag cc">not in this class</span>';
+          var ic = li.querySelector(".step-icon");
+          if (ic) ic.replaceWith(iconEl(s, "step-icon", 28));
           renderStats();
           renderOutput();
         }
